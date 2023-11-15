@@ -1,0 +1,212 @@
+/deep/ .el-button {
+  border-radius: 20px;
+}
+
+/deep/ .el-button--info {
+  background-color: #4d4d4d;
+}
+/deep/ .el-button--info:hover,
+/deep/ .el-button--info:focus {
+  background-color: #737272;
+}
+
+/deep/ .el-button--success {
+  background: #fff;
+  border-color: #4d4d4d;
+  color: #4d4d4d;
+}
+/deep/ .el-button--success:hover,
+/deep/ .el-button--success:focus {
+  background-color: #ebebeb;
+  border-color: #4d4d4d;
+}
+
+/deep/ .el-button--info.is-disabled,
+/deep/ .el-button--info.is-disabled:active,
+/deep/ .el-button--info.is-disabled:focus,
+/deep/ .el-button--info.is-disabled:hover {
+  background: #ababab;
+}
+
+.el-popper,
+.el-message-box,
+.el-cascader__dropdown {
+  border-radius: 15px !important;
+}
+
+.el-cascader-node,
+.el-cascader-node.hover,
+.el-cascader-node:hover,
+.el-cascader-node.in-active-path,
+.el-cascader-node.is-active,
+.el-cascader-node.is-selectable.in-checked-path,
+.el-cascader-node:not(.is-disabled):focus,
+.el-cascader-node:not(.is-disabled):hover {
+  padding: 0 16px 0 8px !important;
+  margin: 0 5px !important;
+}
+
+.el-cascader-node.hover,
+.el-cascader-node:hover,
+.el-cascader-node.in-active-path,
+.el-cascader-node.is-active,
+.el-cascader-node.is-selectable.in-checked-path,
+.el-cascader-node:not(.is-disabled):focus,
+.el-cascader-node:not(.is-disabled):hover,
+.el-select-dropdown__item.hover,
+.el-select-dropdown__item:hover,
+.el-select-dropdown__item.selected {
+  border-radius: 10px !important;
+  background: #fbf3ff !important;
+  font-weight: bold;
+  color: #be7eee !important;
+}
+
+.el-cascader-node__prefix {
+  left: 0 !important;
+}
+
+.el-select-dropdown__item,
+.el-select-dropdown__item.hover {
+  margin: 0 5px !important;
+}
+
+.el-dialog__headerbtn:focus .el-dialog__close,
+.el-dialog__headerbtn:hover .el-dialog__close {
+  color: #a940ff;
+}
+
+i {
+  margin-right: 5px;
+  font-size: 18px;
+  color: #575656;
+}
+
+.bird_icon {
+  color: #44a6ff;
+}
+
+.nodata {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  p {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: 400;
+  }
+}
+
+// 首页
+.ccc-index {
+  padding: 20px 0 20px 20px;
+  overflow-y: scroll;
+  height: calc(100vh - 40px);
+  background-color: #fdf9ff;
+
+  i {
+    font-weight: bold;
+  }
+
+  .head_logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px 20px 0;
+
+    .head_logo_l {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 33px;
+        height: 60px;
+      }
+
+      p {
+        font-size: 25px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        margin-left: 10px;
+      }
+    }
+
+    .head_logo_r,
+    .head_logo_r div {
+      display: flex;
+      align-items: center;
+      color: #575656;
+    }
+  }
+
+  .ccc-menu {
+    height: calc(100vh - 170px);
+    overflow-y: scroll;
+
+    /deep/ {
+      .el-menu {
+        border-right: none;
+        background-color: unset;
+
+        .el-menu-item,
+        .el-submenu__title {
+          margin-bottom: 12px;
+          display: flex;
+          align-items: center;
+          color: #575656;
+          font-size: 16px;
+          border-radius: 30px;
+          font-weight: 400;
+        }
+
+        .el-menu-item:hover,
+        .el-menu-item.is-active,
+        .el-submenu__title:hover {
+          background: #f5e9ff;
+          border-radius: 30px;
+          font-size: 16px;
+          color: #575656;
+          font-weight: bold;
+        }
+
+        .two_have_three_menu {
+          .el-menu-item,
+          .el-menu-item.is-active {
+            min-width: 0;
+            border-radius: 30px !important;
+            margin-left: 30px !important;
+            font-size: 12px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 主页index部分中的底部style
+.aside_footer {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+
+  .el-dropdown {
+    height: 17px;
+  }
+
+  .aside_footer_head_img {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 12px;
+    color: #202226;
+    margin-right: 12px;
+  }
+}

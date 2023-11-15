@@ -1,0 +1,84 @@
+/deep/ .el-form-item {
+  display: flex;
+  flex-direction: column;
+
+  .form_item_label {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 20px;
+      margin-right: 5px;
+    }
+  }
+
+  .el-form-item__content {
+    margin-left: 0 !important;
+  }
+
+  .el-cascader,
+  .el-select {
+    width: 100%;
+  }
+
+  .el-form-item__label {
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  .el-input__inner,
+  .el-textarea__inner {
+    border-radius: 15px;
+  }
+
+  .el-input-number {
+    .el-input__inner {
+      border-radius: 20px;
+    }
+
+    .el-input-number__decrease {
+      border-radius: 20px;
+      border-right: none;
+      background-color: #f6e4fb;
+    }
+
+    .el-input-number__increase {
+      border-radius: 20px;
+      border-left: none;
+      background-color: #f6e4fb;
+    }
+  }
+
+  .el-collapse {
+    border: 1px solid #dcdfe6;
+    border-radius: 15px;
+
+    .el-collapse-item__wrap,
+    .el-collapse-item__header {
+      border-radius: 15px;
+      padding-left: 15px;
+    }
+
+    .el-collapse-item__header {
+      height: 38px;
+      color: #c0c4cc;
+    }
+
+    .el-collapse-el-button {
+      display: flex;
+      justify-content: flex-end;
+      margin: 20px 20px 0 0;
+    }
+  }
+}
+
+.ruleForm_footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+i {
+  font-weight: 400 !important;
+}

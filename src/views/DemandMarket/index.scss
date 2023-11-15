@@ -1,0 +1,235 @@
+.all_demand_content_l_tag-s1,
+.all_demand_content_l_tag-s2,
+.all_demand_content_l_tag-s3,
+.all_demand_content_l_tag-s4 {
+  height: 30px;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  padding: 0 14px;
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.all_demand_content_l_tag-s1 {
+  background: #f5e9ff;
+  box-shadow: 0 0 10px 0 #be7eee;
+}
+
+.all_demand_content_l_tag-s2 {
+  background: #e3ffea;
+  box-shadow: 0 0 10px 0 #5ed37c;
+}
+
+.all_demand_content_l_tag-s4 {
+  background: #ffeee4;
+  box-shadow: 0 0 10px 0 #fbc1b3;
+}
+
+.all_demand_content_l_tag-s3 {
+  background: #e9faff;
+  box-shadow: 0 0 10px 0 #7ebfee;
+}
+
+// demand list
+
+.search {
+  /deep/ .el-input,
+  .el-select {
+    width: 260px;
+    margin-right: 10px;
+    .el-input__inner {
+      border-radius: 15px;
+    }
+  }
+}
+.all_demand_content {
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 0 18px -7px #c77dff;
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  .all_demand_content_l {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .all_demand_content_l_tag {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .all_demand_content_l_desc {
+      font-weight: 400;
+      font-size: 14px;
+      width: 630px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .all_demand_content_r {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    p {
+      text-align: right;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  .el-button {
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 10px 0;
+  }
+
+  /deep/ .el-dialog {
+    width: 50% !important;
+    border-radius: 15px;
+    background: #f4fdf6;
+    box-shadow: none;
+
+    .dialog_skills_title {
+      span {
+        font-size: 18px;
+      }
+    }
+
+    p {
+      color: #101010;
+      font-size: 18px;
+    }
+
+    i {
+      margin-right: 10px;
+    }
+  }
+}
+
+// demand_protocols_list
+.demand_protocols_list {
+  border-radius: 10px;
+  border: 1px #ccc solid;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  .demand_protocols_btn {
+    display: flex;
+    justify-content: flex-end;
+
+    .el-button--info {
+      margin-right: 8px;
+    }
+  }
+
+  .demand_protocols_list_status {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: 8px;
+    }
+  }
+}
+
+// candidate list
+
+.all_candidate_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .all_candidate_content_a {
+    width: 45%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 17px;
+    margin: 10px;
+    box-shadow: 0 0 18px -7px #bbbbbb;
+
+    .all_candidate_content_l {
+      display: flex;
+      align-items: center;
+    }
+
+    .all_candidate_content_r {
+      width: 100%;
+      height: 100%;
+      margin-left: 10px;
+
+      div {
+        display: flex;
+        align-items: center;
+
+        i {
+          font-size: 22px;
+        }
+      }
+
+      /deep/ .el-dialog {
+        width: 50% !important;
+        margin-top: -10vh !important;
+        border-radius: 15px;
+        background: #f4fdf6;
+        box-shadow: none;
+
+        .dialog_skills_title {
+          span {
+            font-size: 18px;
+          }
+        }
+
+        i {
+          margin-right: 10px;
+        }
+
+        .dialog_skills_desc {
+          margin-top: 15px;
+          display: block;
+
+          span {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+          }
+
+          p {
+            font-weight: 400;
+            margin-left: 33px;
+          }
+        }
+
+        .dialog-footer {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
+
+.dialog_skills_tags {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+
+  div {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background: #e8e8e8;
+    border-radius: 10px;
+  }
+}
