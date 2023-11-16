@@ -161,6 +161,7 @@
       }
 
       .h_p_candidate_cont-box {
+        width: 73%;
         display: flex;
         align-items: center;
         margin-left: 20px;
@@ -170,6 +171,7 @@
         }
 
         .h_p_candidate_cont-box-a {
+          width: 76%;
           display: flex;
           flex-direction: column;
           justify-content: space-evenly;
@@ -186,6 +188,9 @@
             .h_p_candidate_cont-box-c {
               margin-right: 5px;
               font-size: 20px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
             }
           }
 
