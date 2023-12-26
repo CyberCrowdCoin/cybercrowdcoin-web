@@ -1,4 +1,4 @@
-const baseURL = "http://3.38.197.206:8090";
+const baseURL = "https://demand.cybercrowdchain.org";
 
 const reqUrl = {
   allDemandList: `${baseURL}/ccc/demand/all-list`, // 需求列表

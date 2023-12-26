@@ -12,7 +12,7 @@ const routes = [
     component: Index,
     children: [
       {
-        path: "/Home",
+        path: "/",
         name: "home",
         components: {
           main: () => import("../views/Home/index.vue"), // 首页

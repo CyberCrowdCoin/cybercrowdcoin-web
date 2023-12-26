@@ -121,7 +121,7 @@ export default {
       submenuList: [
         {
           title: "Home",
-          path: "/Home",
+          path: "/",
           icon: "icon-shouye",
         },
         {
@@ -217,7 +217,7 @@ export default {
           let nonce, sign;
           axios
             .get(
-              "http://3.38.197.206:8090/ccc/user/nonce?address=" + signerAddress
+              "https://demand.cybercrowdchain.org/ccc/user/nonce?address=" + signerAddress
             )
             .then((res) => {
               nonce = res.data.data.nonce;
@@ -258,7 +258,7 @@ export default {
                 })
                 .then(() => {
                   axios
-                    .post("http://3.38.197.206:8090/ccc/user/sign-check", {
+                    .post("https://demand.cybercrowdchain.org/ccc/user/sign-check", {
                       chainId: window.ethereum.chainId,
                       address: signerAddress,
                       signature: sign,
