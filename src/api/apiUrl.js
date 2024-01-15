@@ -1,4 +1,5 @@
-const baseURL = "https://demand.cybercrowdchain.org";
+export const baseURL = "https://demand.cybercrowdchain.org";
+// const baseURL = "http://3.38.197.206:8090";
 
 const reqUrl = {
   allDemandList: `${baseURL}/ccc/demand/all-list`, // 需求列表
@@ -32,4 +33,17 @@ const reqUrl = {
   homepageListData: `${baseURL}/ccc/data/homepage-list`, // 首页-echarts
 };
 
-export { reqUrl };
+const swapBaseUrl = 'https://api-swap.paths.finance' // 正式
+// const swapBaseUrl = 'https://api.paths.finance' // 测试
+
+const swapUrl = {
+  publicNode: 'https://transfer.swft.pro/public/node/publicNode',
+  getBaseInfo: `${swapBaseUrl}/api/getBaseInfo`,
+  multiQuote: `${swapBaseUrl}/api/multiQuote`, // 获取报价
+  commonSwap: `${swapBaseUrl}/api/commonSwap`,
+  addTransData: `${swapBaseUrl}/api/exchangeRecord/addTransData`,
+  getTransDetail: `${swapBaseUrl}/api/exchangeRecord/getTransDetail`,
+  getTransData: `${swapBaseUrl}/api/exchangeRecord/getTransData`,
+}
+
+export { reqUrl, swapUrl };

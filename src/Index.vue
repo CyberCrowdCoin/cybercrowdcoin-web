@@ -109,6 +109,9 @@
 import Web3 from "web3";
 import { ethers } from "ethers";
 import axios from "axios";
+import { baseURL } from "./api/apiUrl";
+import { mapMutations } from "vuex";
+import { web3, provider, estimateGas } from "./util/web3";
 
 export default {
   inject: ["reload"],
@@ -122,6 +125,11 @@ export default {
         {
           title: "Home",
           path: "/",
+          icon: "icon-shouye",
+        },
+        {
+          title: "Swap",
+          path: "/Swap",
           icon: "icon-shouye",
         },
         {
@@ -175,11 +183,12 @@ export default {
     };
   },
 
-  mounted() {
+  created() {
     this.userName = localStorage.getItem("userName");
     let expire = localStorage.getItem("expire");
     let now = Date.now();
     if (now <= expire) {
+      this.SET_USERNAME(this.userName);
       this.userName =
         this.userName.slice(0, 5) + "..." + this.userName.slice(-4);
     } else {
@@ -188,6 +197,7 @@ export default {
   },
 
   methods: {
+    ...mapMutations(["SET_USERNAME"]),
     goCon(conE) {
       if (this.$route.path === conE) {
         return;
@@ -198,9 +208,6 @@ export default {
 
     async loginWithMetaMask() {
       if (typeof window.ethereum !== "undefined") {
-        const web3 = new Web3(window.ethereum);
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
-
         try {
           // 请求用户账户地址
           const accounts = await window.ethereum.request({
@@ -216,9 +223,7 @@ export default {
           console.log("Connected account:", account);
           let nonce, sign;
           axios
-            .get(
-              "https://demand.cybercrowdchain.org/ccc/user/nonce?address=" + signerAddress
-            )
+            .get(baseURL + "/ccc/user/nonce?address=" + signerAddress)
             .then((res) => {
               nonce = res.data.data.nonce;
             })
@@ -258,7 +263,7 @@ export default {
                 })
                 .then(() => {
                   axios
-                    .post("https://demand.cybercrowdchain.org/ccc/user/sign-check", {
+                    .post(baseURL + "/ccc/user/sign-check", {
                       chainId: window.ethereum.chainId,
                       address: signerAddress,
                       signature: sign,
@@ -318,6 +323,7 @@ export default {
   computed: {
     // 动态返回对应的路由path
     onRoutes() {
+      if (this.$route.path.includes("/Swap")) return "/Swap";
       return this.$route.path;
     },
   },

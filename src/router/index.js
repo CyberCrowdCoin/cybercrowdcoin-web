@@ -19,6 +19,13 @@ const routes = [
         },
       },
       {
+        path: "/Swap",
+        name: "Swap",
+        components: {
+          main: () => import("../views/Swap/index.vue"), // swap
+        },
+      },
+      {
         path: "/DemandMarket/DemandList",
         name: "DemandMarketdemandList",
         components: {
